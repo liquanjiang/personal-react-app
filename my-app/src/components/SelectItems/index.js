@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import store from '../../store/store'
 import './select.css'
+import { observer } from 'mobx-react'
 
-export default class Clock extends Component {
+@observer
+class Clock extends Component {
 
     constructor(props) {
         super(props)
@@ -75,3 +77,5 @@ export default class Clock extends Component {
         )
     }
 }
+
+export default  Clock
