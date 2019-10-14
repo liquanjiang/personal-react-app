@@ -1,0 +1,62 @@
+.clock {
+    position:relative;
+    width:200px;
+    height:30px;
+    margin:30px auto;
+    border:1px solid #6a8edd;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.clock ul {
+    width:200px;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:30px;
+    left:0;
+    border:1px solid #aaa;
+    border-radius:4px;
+    background:#fff;
+}
+
+.clock:focus {
+    outline: none;
+}
+
+.clock ul li{
+    width:200px;
+    height:30px;
+    list-style: none;
+    text-align:center;
+    line-height:30px;
+}
+
+.clock ul li:hover{
+    background: aquamarine;
+}
+
+.clock ul li.active{
+   color:#f00
+}
+
+.content {
+    width:200px;
+    height:30px;
+    line-height:30px;
+    text-align:left;
+    text-indent:10px;
+}
+
+.triangle {
+    width:0;
+    height:0;
+    line-height:0;
+    border-top:10px solid #61dafb;
+    border-left:8px solid transparent;
+    border-right: 8px solid transparent;
+    position:absolute;
+    right:5px;
+    top:10px;
+    cursor: pointer;
+}

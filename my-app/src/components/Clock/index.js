@@ -11,7 +11,6 @@ export default class Clock extends Component {
             tiger:store.getState()
         }
         store.subscribe(() => {
-            console.log(store.getState());
             this.setState({tiger:store.getState() })
         })
     }

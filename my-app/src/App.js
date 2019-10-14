@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import logo from './logo.svg';
 import './App.css';
 import Clock from './components/Clock'
+import SelectItem from './components/SelectItems'
 
 
 class App extends Component{
@@ -20,11 +21,11 @@ class App extends Component{
             <div className="App">
                 <header className="App-header">
                     <p>{this.props.tiger}</p>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <Clock />
-                    <button onClick={PayIncrease}>升职加薪</button>
-                    <button onClick={PayDecrease}>迟到罚款</button>
                 </header>
+                <SelectItem />
+                <Clock />
+                <button onClick={PayIncrease}>升职加薪</button>
+                <button onClick={PayDecrease}>迟到罚款</button>
             </div>
         );
     }
