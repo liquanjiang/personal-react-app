@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import store from '../../store/store'
+import store from '../../store'
 import './select.css'
 import { observer } from 'mobx-react'
 
@@ -44,7 +44,7 @@ import { observer } from 'mobx-react'
   }
 
     showList = () =>{
-      this.setState({showUl: true})
+      this.setState({ showUl: true})
     }
 
     hideList = () => {
@@ -56,9 +56,9 @@ import { observer } from 'mobx-react'
     }
 
     render () {
-      const { tiger, array, showUl, selectedValue } = this.state;
+      const { array, showUl, selectedValue } = this.state;
 
-      const list = array.map((item, index) =>
+      const list = array.map((item) =>
         <li className={ item.value === selectedValue ? 'active' : ''}
           onClick={() => this.selectValue(item.value)}
         >
@@ -69,7 +69,7 @@ import { observer } from 'mobx-react'
         <div className={'clock'} tabIndex={-1} onBlur={this.hideList}>
           <div className={'content'} onClick={this.showList}>
             {selectedValue}
-            <div className={'triangle'}></div>
+            <div className={'triangle'}/>
           </div>
           { showUl ? <ul>{list}</ul> : null }
         </div>
