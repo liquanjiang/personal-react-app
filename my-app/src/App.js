@@ -6,37 +6,37 @@ import Clock from './components/Clock'
 
 
 class App extends Component{
-  constructor(props){
+  constructor (props){
     super(props)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     console.log(this.props)
   }
-  render() {
+  render () {
     const { PayIncrease, PayDecrease } = this.props;
     return (
-        <div className="App">
-          <header className="App-header">
-            <p>{this.props.tiger}</p>
-            <img src={logo} className="App-logo" alt="logo" />
-            <Clock />
-            <button onClick={PayIncrease}>升职加薪</button>
-            <button onClick={PayDecrease}>迟到罚款</button>
-          </header>
-        </div>
+      <div className="App">
+        <header className="App-header">
+          <p>{this.props.tiger}</p>
+          <img src={logo} className="App-logo" alt="logo" />
+          <Clock />
+          <button onClick={PayIncrease}>升职加薪</button>
+          <button onClick={PayDecrease}>迟到罚款</button>
+        </header>
+      </div>
     );
   }
 }
 
-//需要渲染什么数据
-function mapStateToProps(state) {
+// 需要渲染什么数据
+function mapStateToProps (state) {
   return {
     tiger: state
   }
 }
-//需要触发什么行为
-function mapDispatchToProps(dispatch) {
+// 需要触发什么行为
+function mapDispatchToProps (dispatch) {
   return {
     PayIncrease: () => dispatch({ type: 'ADD' }),
     PayDecrease: () => dispatch({ type: 'MINUS' })
