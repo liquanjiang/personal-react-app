@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width:100%;height:500px;background:rgba(222,0,0,0.3)" id="ant">
+
+</div>
+<div style="width:100%;height:100px;background:#f1f1f1;color:#333;border:1px solid #fabedd" id="show">
+</div>
+<div style="width:100%;height:100px;background:#f1f1f1;color:#333;border:1px solid #fabedd" id="show2">
+</div>
+</body>
+<script>
+    function throttle(method,delay){
+        var timer=null;
+        return function(){
+            var context=this, args=arguments;
+            clearTimeout(timer);
+            timer=setTimeout(function(){
+                method.apply(context,args);
+            },delay);
+        }
+    }
+    window.onload=function(){
+        let odiv=document.getElementById("ant");
+        let ospan=document.getElementById("show");
+        let ospan2=document.getElementById("show2");
+        let Y = 0;
+        odiv.onmousemove= throttle(function(ev) {
+            let oEvent=ev||event;
+            ospan.innerHTML="坐标值:X:"+oEvent.clientX+" Y:"+oEvent.clientY;
+            ospan2.innerHTML=Y;
+            Y=oEvent.clientY
+        },100)
+    }
+</script>
+</html>

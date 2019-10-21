@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './components/Clock'
+import Test from './components/TestMobx'
 
 
 class App extends Component{
@@ -11,7 +12,7 @@ class App extends Component{
   }
 
   componentDidMount () {
-    console.log(this.props)
+
   }
   render () {
     const { PayIncrease, PayDecrease } = this.props;
@@ -21,6 +22,7 @@ class App extends Component{
           <p>{this.props.tiger}</p>
           <img src={logo} className="App-logo" alt="logo" />
           <Clock />
+          <Test />
           <button onClick={PayIncrease}>升职加薪</button>
           <button onClick={PayDecrease}>迟到罚款</button>
         </header>

@@ -47,6 +47,7 @@
     "no-nested-ternary": "off",
     "no-return-assign": ["error", "except-parens"],
     "no-tabs":"off",
+    "no-throw-literal": "off",
     "no-redeclare": "error",
     "no-spaced-func": "error",
     "no-underscore-dangle": "off",
