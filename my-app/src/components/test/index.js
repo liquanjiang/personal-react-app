@@ -62,3 +62,23 @@ d.getName()
 d.__proto__.getName()
 
 d.__proto__.getCount()
+
+
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+
+const array = [[]];
+const len = 5;
+let temp = 0;
+for(let i = 0; i < arr.length; i ++) {
+  const num = Math.floor(i / len);
+  if(num <= temp) {
+    array[temp].push(arr[i])
+  } else {
+    temp = num;
+    array.push([]);
+    array[temp].push(arr[i])
+  }
+}
+
+console.log(array)

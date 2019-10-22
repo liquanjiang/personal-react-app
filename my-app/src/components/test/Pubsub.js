@@ -45,6 +45,10 @@ class Pubsub {
       throw 'func为函数类型'
     }
     const list = this.list;
+    if(!list[topic]) {
+      throw '不存在该topic监听'
+    }
+
     if(!func) { // 如果没有第二个参数，就移除所有的监听事件
       if(list[topic]) {
         delete list[topic]
@@ -65,19 +69,12 @@ class Pubsub {
 
 const event = new Pubsub();
 
-const remove2 = event.subscribe('123', function(param) {
+const remove2 = event.subscribe('123', function (param) {
   console.log(param)
 });
 
-const remove3 = event.subscribe('123', function(param) {
+const remove3 = event.subscribe('123', function (param) {
   console.log(param)
 });
 
 event.publish('123', 'test')
-
-const arr = [];
-arr.push(function(data) { console.log(data) });
-
-arr.push(function(item) { console.log(item) });
-
-arr.includes(function(data) { console.log(data) });
