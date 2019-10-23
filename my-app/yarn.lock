@@ -6401,10 +6401,10 @@ mobx-react@^6.1.4:
   dependencies:
     mobx-react-lite "^1.4.2"
 
-mobx@^4.14.1:
-  version "4.14.1"
-  resolved "https://registry.npm.taobao.org/mobx/download/mobx-4.14.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmobx%2Fdownload%2Fmobx-4.14.1.tgz#0dc5622523363f6f5b467a5a0c4c99846b789748"
-  integrity sha1-DcViJSM2P29bRnpaDEyZhGt4l0g=
+mobx@^5.14.1:
+  version "5.14.2"
+  resolved "https://registry.npm.taobao.org/mobx/download/mobx-5.14.2.tgz#608b8ee9bc9f9e406b48da676e677b150e901eba"
+  integrity sha1-YIuO6byfnkBrSNpnbmd7FQ6QHro=
 
 move-concurrently@^1.0.1:
   version "1.0.1"
